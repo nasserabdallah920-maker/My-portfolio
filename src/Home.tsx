@@ -25,9 +25,9 @@ export default function Home() {
   }
 
   return (
-    <div className="home-container bg-[#0F172A] w-[100%] h-[100vh]">
+    <div className="home-container bg-[#0F172A] w-[100%] min-h-[100vh] pb-6">
       <Header />
-      <div className="home-body flex justify-between pl-[50px] pr-[50px] mt-[100px]">
+      <div className="home-body md:flex justify-between pl-[50px] pr-[50px] mt-[100px]">
         <div className="flex flex-col justify-center text-center md:text-left space-y-6">
           <h1 className="text-[#38BDF8] text-5xl md:text-6xl font-bold">
             Hi, I'm Abdallah
@@ -80,10 +80,10 @@ export default function Home() {
             About Me{" "}
           </Link>
         </div>
-        <div className="flex flex-col justify-center">
+        <div className="flex  md:flex-col justify-center">
           <img
             onClick={Show}
-            className="w-[300px] h-[380px] rounded-2xl transition-transform duration-500 hover:scale-105 cursor-zoom-in"
+            className="w-[300px] h-[380px] mt-6 md:mt-0 rounded-2xl transition-transform duration-500 hover:scale-105 cursor-zoom-in"
             src={ava2}
             alt="photo"
           />

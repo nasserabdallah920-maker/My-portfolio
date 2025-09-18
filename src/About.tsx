@@ -11,7 +11,7 @@ export default function About() {
   const adjustedAge = m < 0 || (m === 0 && today.getDate() < birthDate.getDate()) ? age - 1 : age;
 
   return (
-    <div className="about-container w-[100%] min-h-[100vh] bg-[#0F172A] text-white">
+    <div className="about-container w-[100%] min-h-[100vh] bg-[#0F172A] text-white pb-3">
       <Header />
       <div className="about-body max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-center gap-10 mt-20 px-5">
         <div className="avatar flex-shrink-0">
@@ -51,19 +51,19 @@ export default function About() {
       </div>
 
       <nav className="small-nav flex gap-7 justify-center items-center mt-5 text-3xl">
-        <Link to="" className="text-[#1877F2] hover:text-[#145dbf] hover:scale-125 transition-all duration-300">
+        <Link to="https://www.facebook.com/share/1CFQxjAFEo/" className="text-[#1877F2] hover:text-[#145dbf] hover:scale-125 transition-all duration-300">
           <i className="fa-brands fa-facebook"></i>
         </Link>
-        <Link to="" className="text-[#25D366] hover:text-[#1da851] hover:scale-125 transition-all duration-300">
+        <Link to="https://wa.me/qr/6UFKOOJUV6YCB1" className="text-[#25D366] hover:text-[#1da851] hover:scale-125 transition-all duration-300">
           <i className="fa-brands fa-whatsapp"></i>
         </Link>
-        <Link to="" className="text-[#E4405F] hover:text-[#c13584] hover:scale-125 transition-all duration-300">
+        <Link to="https://www.instagram.com/abdalah_an1/" className="text-[#E4405F] hover:text-[#c13584] hover:scale-125 transition-all duration-300">
           <i className="fa-brands fa-instagram"></i>
         </Link>
-        <Link to="" className="text-[#0A66C2] hover:text-[#004182] hover:scale-125 transition-all duration-300">
+        <Link to="https://www.linkedin.com/in/abdallah-nasser-427718317/" className="text-[#0A66C2] hover:text-[#004182] hover:scale-125 transition-all duration-300">
           <i className="fa-brands fa-linkedin"></i>
         </Link>
-        <Link to="" className="text-[#333333] hover:text-[#6e5494] hover:scale-125 transition-all duration-300">
+        <Link to="https://github.com/nasserabdallah920-maker" className="text-[#333333] hover:text-[#6e5494] hover:scale-125 transition-all duration-300">
           <i className="fa-brands fa-github"></i>
         </Link>
       </nav>
