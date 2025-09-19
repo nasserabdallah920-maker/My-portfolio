@@ -3,12 +3,12 @@ import { createRoot } from "react-dom/client";
 import "./index.css";
 import App from "./App.tsx";
 import { BrowserRouter } from "react-router-dom";
-import './all.min.css'
+import "./all.min.css";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-<BrowserRouter basename="/My-portfolio">
-  <App />
-</BrowserRouter>
+    <BrowserRouter basename="/My-portfolio">
+      <App />
+    </BrowserRouter>
   </StrictMode>
 );

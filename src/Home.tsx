@@ -1,26 +1,17 @@
-import { useRef, useState } from "react";
+import { useState } from "react";
 import Header from "./components/Header";
 import ava2 from "./imgs/ava2.jpg";
 import { Link } from "react-router-dom";
 
 export default function Home() {
-  const [show, setShow] = useState<boolean>(false);
+  const [show, setShow] = useState<string>("hidden");
 
-  const RefImg = useRef<HTMLDivElement>(null);
 
   function Show() {
-    if (!show && RefImg.current !== null) {
-      RefImg.current.classList.remove("hidden");
-      RefImg.current.style.display = "flex";
-      setShow(true);
-    }
-  }
-  function DelShow() {
-    if (show && RefImg.current !== null) {
-      RefImg.current.classList.remove("flex");
-      RefImg.current.style.display = "none";
-
-      setShow(false);
+    if (show === "hidden") {
+      setShow("flex");
+    } else {
+      setShow("hidden");
     }
   }
 
@@ -90,13 +81,12 @@ export default function Home() {
         </div>
       </div>
       <div
-        ref={RefImg}
-        className=" fixed inset-0 hidden items-center justify-center bg-transparent bg-opacity-50 z-50"
+        className={`fixed inset-0 ${show} items-center justify-center bg-transparent bg-opacity-50 z-50`}
       >
         <div className="relative p-6 rounded-xl">
           <i
-            onClick={DelShow}
-            className="fa-solid fa-xmark    absolute top-2 right-2 p-2 bg-[#38BDF8] rounded-full text-white text-xlshadow-lg hover:bg-[#0BC5EA] hover:scale-110 transition-transform duration-300 cursor-pointer"
+            onClick={Show}
+            className="fa-solid fa-xmark absolute top-2 right-2 p-2 bg-[#38BDF8] rounded-full text-white text-xlshadow-lg hover:bg-[#0BC5EA] hover:scale-110 transition-transform duration-300 cursor-pointer"
           ></i>
 
           <img
@@ -106,7 +96,6 @@ export default function Home() {
           />
         </div>
       </div>
-      <div id="About"></div>
     </div>
   );
 }

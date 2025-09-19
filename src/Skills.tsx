@@ -28,44 +28,27 @@ const Section = ({ title, skills }: { title: string; skills: Skill[] }) => (
 );
 
 export default function Skills() {
-  // const frontend: Skill[] = [
-  //   { name: "HTML", icon: "fa-brands fa-html5 text-orange-500" },
-  //   { name: "CSS", icon: "fa-brands fa-css3-alt text-blue-500" },
-  //   { name: "JavaScript", icon: "fa-brands fa-js text-yellow-400" },
-  //   { name: "TypeScript", icon: "fa-solid fa-code text-blue-400" },
-  //   { name: "React", icon: "fa-brands fa-react text-cyan-400" },
-  //   { name: "Tailwind", icon: "fa-solid fa-wind text-sky-400" },
-  //   { name: "Redux Toolkit", icon: "fa-brands fa-react text-purple-500" },
-  //   { name: "Axios", icon: "fa-solid fa-network-wired text-blue-600" },
-  //   { name: "React Router", icon: "fa-solid fa-route text-green-400" },
-  //   { name: "Universal Cookie", icon: "fa-solid fa-cookie text-yellow-600" },
-  //   { name: "Font Awesome", icon: "fa-brands fa-font-awesome text-orange-400" },
-  //   { name: "Zod", icon: "fa-solid fa-shield-halved text-green-600" },
-  //   {
-  //     name: "React Hook Form",
-  //     icon: "fa-solid fa-clipboard-check text-pink-500",
-  //   },
-  // ];
-
   const frontend: Skill[] = [
-  { name: "HTML", icon: "fa-brands fa-html5 text-orange-500" },
-  { name: "CSS", icon: "fa-brands fa-css3-alt text-blue-500" },
-  { name: "JavaScript", icon: "fa-brands fa-js text-yellow-400" },
-  { name: "TypeScript", icon: "fa-solid fa-code text-blue-400" },
-  { name: "React", icon: "fa-brands fa-react text-cyan-400" },
-  { name: "Tailwind", icon: "fa-solid fa-wind text-sky-400" },
-];
+    { name: "HTML", icon: "fa-brands fa-html5 text-orange-500" },
+    { name: "CSS", icon: "fa-brands fa-css3-alt text-blue-500" },
+    { name: "JavaScript", icon: "fa-brands fa-js text-yellow-400" },
+    { name: "TypeScript", icon: "fa-solid fa-code text-blue-400" },
+    { name: "React", icon: "fa-brands fa-react text-cyan-400" },
+    { name: "Tailwind", icon: "fa-solid fa-wind text-sky-400" },
+  ];
 
-const libraries: Skill[] = [
-  { name: "Redux Toolkit", icon: "fa-brands fa-react text-purple-500" },
-  { name: "Axios", icon: "fa-solid fa-network-wired text-blue-600" },
-  { name: "React Router", icon: "fa-solid fa-route text-green-400" },
-  { name: "Universal Cookie", icon: "fa-solid fa-cookie text-yellow-600" },
-  { name: "Font Awesome", icon: "fa-brands fa-font-awesome text-orange-400" },
-  { name: "Zod", icon: "fa-solid fa-shield-halved text-green-600" },
-  { name: "React Hook Form", icon: "fa-solid fa-clipboard-check text-pink-500" },
-];
-
+  const libraries: Skill[] = [
+    { name: "Redux Toolkit", icon: "fa-brands fa-react text-purple-500" },
+    { name: "Axios", icon: "fa-solid fa-network-wired text-blue-600" },
+    { name: "React Router", icon: "fa-solid fa-route text-green-400" },
+    { name: "Universal Cookie", icon: "fa-solid fa-cookie text-yellow-600" },
+    { name: "Font Awesome", icon: "fa-brands fa-font-awesome text-orange-400" },
+    { name: "Zod", icon: "fa-solid fa-shield-halved text-green-600" },
+    {
+      name: "React Hook Form",
+      icon: "fa-solid fa-clipboard-check text-pink-500",
+    },
+  ];
 
   const tools: Skill[] = [
     { name: "Git", icon: "fa-brands fa-git-alt text-red-500" },

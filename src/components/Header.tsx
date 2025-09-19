@@ -6,15 +6,32 @@ export default function Header() {
   const [appear, setAppear] = useState<boolean>(false);
   function show() {
     if (!appear) {
-      setAppear(true)
+      setAppear(true);
       header.current?.classList.remove("hidden");
       header.current?.classList.add("flex");
     } else {
-      setAppear(false)
+      setAppear(false);
       header.current?.classList.add("hidden");
       header.current?.classList.remove("flex");
     }
   }
+
+  const links: { link: string; path: string }[] = [
+    { link: "Home", path: "/" },
+    { link: "About Me", path: "/About" },
+    { link: "Projects", path: "/projects" },
+    { link: "Skills", path: "/Skills" },
+    { link: "Contact Us", path: "/contact" },
+  ];
+
+  const showLinks = links.map((element) => (
+    <Link
+      className="px-4 py-2 rounded-xl transition-colors duration-500 hover:bg-[#0BC5EA]"
+      to={element.path}
+    >
+      {element.link}
+    </Link>
+  ));
   return (
     <div className="header-container flex justify-center pt-5 items-center">
       <button
@@ -28,39 +45,7 @@ export default function Header() {
         ref={header}
         className="bg-[#38bff8d7] z-40 hidden mt-[300px] flex-col sm:flex-row 2xl:w-5xl xl:w-4xl lg:w-3xl md:w-2xl sm:w-xl text-white sm:flex sm:justify-around p-[10px] rounded-2xl fixed sm:mt-[50px]"
       >
-        <Link
-          className="px-4 py-2 rounded-xl transition-colors duration-500 hover:bg-[#0BC5EA]"
-          to="/"
-        >
-          Home
-        </Link>
-        <Link
-          className="px-4 py-2 rounded-xl transition-colors duration-500 hover:bg-[#0BC5EA]"
-          to="/About"
-        >
-          About Me
-        </Link>
-
-        <Link
-          className="px-4 py-2 rounded-xl transition-colors duration-500 hover:bg-[#0BC5EA]"
-          to="/projects"
-        >
-          Projects
-        </Link>
-
-        <Link
-          className="px-4 py-2 rounded-xl transition-colors duration-500 hover:bg-[#0BC5EA]"
-          to="/Skills"
-        >
-          Skills
-        </Link>
-
-        <Link
-          className="px-4 py-2 rounded-xl transition-colors duration-500 hover:bg-[#0BC5EA]"
-          to="/contact"
-        >
-          Contact Us
-        </Link>
+        {showLinks}
       </header>
     </div>
   );
